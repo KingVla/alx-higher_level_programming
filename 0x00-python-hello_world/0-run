@@ -1,2 +1,3 @@
 #!/bin/bash
-pyhon "	SPYFILE " 
+pyhon3 $SPYFILE 
+

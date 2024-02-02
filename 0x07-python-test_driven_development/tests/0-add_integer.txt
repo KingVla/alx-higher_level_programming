@@ -1,0 +1,31 @@
+def add_integer(a, b=98):
+    """
+    Adds two integers.
+
+    Parameters:
+    - a (int or float): The first integer or float to be added.
+    - b (int or float, optional): The second integer or float to be added.
+                                  Defaults to 98 if not provided.
+
+    Raises:
+    - TypeError: If either 'a' or 'b' is not an integer or a float.
+
+    Returns:
+    - int: The addition of 'a' and 'b', casted to an integer.
+
+    This function adds two integers together. If 'a' or 'b' are floats, they
+    are first casted to integers before the addition operation. The result is
+    always returned as an integer.
+    """
+    if not (isinstance(a, int) or isinstance(a, float)):
+        raise TypeError("a must be an integer or b must be an integer")
+    if not (isinstance(b, int) or isinstance(b, float)):
+        raise TypeError("a must be an integer or b must be an integer")
+
+    if isinstance(a, float):
+        a = int(a)
+    if isinstance(b, float):
+        b = int(b)
+
+    return int(a + b)
+
